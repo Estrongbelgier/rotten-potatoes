@@ -18,9 +18,9 @@ spec:
           ports:
             - containerPort: 27017
           env:
-            - name: MONGODB_INITDB_ROOT_USERNAME
+            - name: MONGO_INITDB_ROOT_USERNAME
               value: mongouser
-            - name: MONGODB_INITDB_ROOT_PASSWORD
+            - name: MONGO_INITDB_ROOT_PASSWORD
               value: mongopwd
 ---
 #Service mongodb
@@ -77,5 +77,5 @@ spec:
   ports:
     - port: 80
       targetPort: 5000 # Porta do container web
-      nodePort: 30000 # Porta do serviço
-  type: NodePort
+      #nodePort: 30000 # Porta do serviço
+  type: LoadBalancer
