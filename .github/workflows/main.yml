@@ -27,4 +27,4 @@ jobs:
           push: true
           tag: |
             estrongbelgier/rotten-potatoes:latest
-            estrongbelgier/rotten-potatoes:${{ github.run_number  }}
+            estrongbelgier/rotten-potatoes:2.0.0
